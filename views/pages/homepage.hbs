@@ -1,0 +1,11 @@
+<h1>Hola MVC</h1>
+<p>This is my first page</p>
+<button onclick="window.location.href='./about-us'">Acerca de nosotros</button>
+<p>Lista de productos: </p>
+<button onclick="window.location.href='./crear-producto'">Crear Producto</button>
+{{#each products}}
+<p>{{id}} - {{ name}}</p>
+<form action="/products/{{id}}"><button > Details</button></form>
+<form action="/products/{{id}}/edit"><button > Edit</button></form>
+<form method="POST" action="/products/{{ id }}?_method=DELETE"> <button> DELETE</button></form>
+{{/each}}
